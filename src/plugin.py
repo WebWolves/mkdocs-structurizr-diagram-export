@@ -25,6 +25,6 @@ class ExportStructurizrDiagrams(BasePlugin[ExportStructurizrDiagramsConfig]):
         spawnProcessSync(f'docker run --rm -v {Path.cwd()}:/root/data -w /root/data ghcr.io/aidmax/structurizr-cli-docker \
             export --workspace {self.config.workspacePath} --format {self.config.format} --output {self.config.outputPath}')
 
-    def on_serve(self, server, config):
+    def on_serve(self, server, **kwargs):
         self.export()
         return server
