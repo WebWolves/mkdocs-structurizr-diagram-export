@@ -5,7 +5,7 @@ setup(
     version='0.1.0',
     author='Volodymyr Lytvynov',
     author_email='avoidroutine@gmail.com',
-    packages=['mkdocs_structurizr_diagram_export'],
+    packages=['src'],
     license='MIT license',
     description='Mkdocs plugin that exports structurizr diagrams.',
     install_requires=['mkdocs'],
