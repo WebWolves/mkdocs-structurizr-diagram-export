@@ -3,7 +3,7 @@ from mkdocs.config.base import Config
 from mkdocs.config import config_options as c
 from pathlib import Path
 
-from utils import spawnProcessSync
+from .utils import spawnProcessSync
 
 class ExportStructurizrDiagramsConfig(Config):
     """defines the plugin configuration"""
