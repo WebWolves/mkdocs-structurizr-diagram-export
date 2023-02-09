@@ -6,3 +6,7 @@ def spawnProcessSync(process):
     for line in p.stdout.readlines():
         print(line)
     p.wait()
+
+class Colors:
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
