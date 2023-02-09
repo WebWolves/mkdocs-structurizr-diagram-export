@@ -21,9 +21,11 @@ class ExportStructurizrDiagrams(BasePlugin[ExportStructurizrDiagramsConfig]):
     """Export Structurizr diagrams to defined format"""
 
     def export(self):
+        print('Start exporting diagrams on mkdocs serve command')
         spawnProcessSync('docker pull ghcr.io/aidmax/structurizr-cli-docker')
         spawnProcessSync(f'docker run --rm -v {Path.cwd()}:/root/data -w /root/data ghcr.io/aidmax/structurizr-cli-docker \
             export --workspace {self.config.workspacePath} --format {self.config.format} --output {self.config.outputPath}')
+        print('Diagrams exported successfully')
 
     def on_serve(self, server, **kwargs):
         self.export()
