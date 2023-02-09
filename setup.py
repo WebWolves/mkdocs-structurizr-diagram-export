@@ -12,7 +12,7 @@ setup(
 
     entry_points={
         'mkdocs.plugins': [
-            'structurizr-diagram-export = src.plugin:NavTitleLoader',
+            'structurizr-diagram-export = src.plugin:ExportStructurizrDiagrams',
         ]
     }
 )
