@@ -8,7 +8,7 @@ setup(
     packages=['src'],
     license='MIT license',
     description='Mkdocs plugin that exports structurizr diagrams.',
-    install_requires=['mkdocs'],
+    install_requires=[],
 
     entry_points={
         'mkdocs.plugins': [
