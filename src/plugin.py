@@ -35,3 +35,6 @@ class ExportStructurizrDiagrams(BasePlugin[ExportStructurizrDiagramsConfig]):
     def on_serve(self, server, **kwargs):
         self.export()
         return server
+
+    def on_pre_build(self, **kwargs):
+        self.export()
